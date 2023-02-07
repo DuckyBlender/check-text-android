@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
         fun checkPass(): Boolean {
             val passText = passInput.text.toString()
             val confirmText = passConfirm.text.toString()
+
+            // Also check if the password is empty
+            val emptyBool = passText.isEmpty() || confirmText.isEmpty()
+            if (emptyBool) { button.text = "Puste hasło!" }
+
             val zgodneBool = passText == confirmText
             val duzaBool = passText.any { it.isUpperCase() }
             val malaBool = passText.any { it.isLowerCase() }
@@ -37,15 +42,21 @@ class MainActivity : AppCompatActivity() {
 
             // Set the state of the CheckedTextViews
             zgodne.isChecked = zgodneBool
+            if (!zgodneBool) { button.text = "Hasła nie są zgodne!" }
             duza.isChecked = duzaBool
+            if (!duzaBool) { button.text = "Brak dużej litery!" }
             mala.isChecked = malaBool
+            if (!malaBool) { button.text = "Brak małej litery!" }
             cyfra.isChecked = cyfraBool
+            if (!cyfraBool) { button.text = "Brak cyfry!" }
             znak.isChecked = znakBool
+            if (!znakBool) { button.text = "Brak znaku!" }
 
             // Enable the button if all the conditions are met
             val wynik = zgodneBool && duzaBool && malaBool && cyfraBool && znakBool
-
-
+            if (wynik) {
+                button.text = "Zaloguj"
+            }
             button.isEnabled = wynik
             return wynik
         }
@@ -57,14 +68,11 @@ class MainActivity : AppCompatActivity() {
         // Listen for clicks on the button
         button.setOnClickListener {
             if (checkPass()) {
-                // Pop up a message saying that the password is correct using snackbar
-                var snackbar = Snackbar.make(findViewById(R.id.button), "Hasło poprawne", Snackbar.LENGTH_LONG)
-                snackbar.show()
-            }
-            else {
-                // Pop up a message saying that the password is incorrect
-                var snackbar = Snackbar.make(findViewById(R.id.button), "Hasło niepoprawne", Snackbar.LENGTH_LONG)
-                snackbar.show()
+                // Change the text of the button to "Zalogowano"
+                button.text = "Zalogowano!"
+            } else {
+                // Show a snackbar with the message "Hasła nie są zgodne"
+                button.text = "Potwierdź"
             }
         }
     }
