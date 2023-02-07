@@ -5,9 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckedTextView
 import android.widget.EditText
-import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
-import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
