@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passInput"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passConfirm"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="hint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passInput" />
+
+    <TextView
+        android:id="@+id/znakView"
+        android:layout_width="216dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="116dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cyfraView"
+        android:layout_width="216dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/znakView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/malaView"
+        android:layout_width="216dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/cyfraView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/duzaView"
+        android:layout_width="216dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/malaView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/zgodneView"
+        android:layout_width="216dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/duzaView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
