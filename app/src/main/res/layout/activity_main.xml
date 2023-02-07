@@ -11,8 +11,11 @@
         android:layout_width="299dp"
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
+        android:background="#00FFFFF7"
         android:gravity="center"
-        android:hint="hint"
+        android:hint="Wprowadź hasło"
+        android:inputType="textPassword"
+        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,65 +25,103 @@
         android:layout_width="299dp"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
+        android:background="#00FBF8B5"
         android:gravity="center"
-        android:hint="hint"
+        android:hint="Potwierdź hasło"
+        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passInput" />
 
-    <TextView
-        android:id="@+id/znakView"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="116dp"
+    <CheckedTextView
+        android:id="@+id/znak"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:background="#FEBFBF"
+        android:checkMark="?android:attr/textCheckMark"
+        android:checked="false"
         android:gravity="center"
+        android:text="Znak Specjalny"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cyfra" />
+
+    <CheckedTextView
+        android:id="@+id/cyfra"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:background="#FEBFBF"
+        android:checkMark="?android:attr/textCheckMark"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Cyfra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mala" />
+
+    <CheckedTextView
+        android:id="@+id/mala"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:background="#FEBFBF"
+        android:checkMark="?android:attr/textCheckMark"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Mała Litera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duza" />
+
+    <CheckedTextView
+        android:id="@+id/duza"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:background="#FEBFBF"
+        android:checkMark="?android:attr/textCheckMark"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Duża Litera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/zgodne" />
+
+    <CheckedTextView
+        android:id="@+id/zgodne"
+        android:layout_width="170dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="12dp"
+        android:background="#FEBFBF"
+        android:checkMark="?android:attr/textCheckMark"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Zgodne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passConfirm" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="223dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:text="Potwierdź"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/znak"
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
-        android:id="@+id/cyfraView"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="32dp"
+        android:id="@+id/textView9"
+        android:layout_width="205dp"
+        android:layout_height="64dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/znakView"
+        android:text="Alan Klas"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/malaView"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/cyfraView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/duzaView"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/malaView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/zgodneView"
-        android:layout_width="216dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="32dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/duzaView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
