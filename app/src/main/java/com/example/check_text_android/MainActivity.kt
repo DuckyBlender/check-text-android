@@ -36,7 +36,8 @@ class MainActivity : AppCompatActivity() {
             val duzaBool = passText.any { it.isUpperCase() }
             val malaBool = passText.any { it.isLowerCase() }
             val cyfraBool = passText.any { it.isDigit() }
-            val znakBool = passText.any { it.isLetterOrDigit() }
+            // Check if there is a special character
+            val znakBool = passText.any { it.isLetterOrDigit().not() }
 
             // Set the state of the CheckedTextViews
             zgodne.isChecked = zgodneBool
